@@ -1,47 +1,64 @@
-<!-- 
-
-
-ESTE CÓDIGO POSSUI FALHAS GRAVES DE METADADOS, SEMÂNTICA, ACESSIBILIDADE E SEGURANÇA 
-
-## Checklist de Requisitos para Entrega (Pull Request):
-  - Adicionar internacionalização na tag raiz e metadados .
-  - Configurar metadados descritivos de SEO e Open Graph (Social SEO).
-  - Substituir a estrutura por elementos semânticos ( <header> , <main> , etc.).
-  - Vincular tags <label for="..."> aos respectivos inputs com IDs correspondentes.
-  - Converter o método do formulário para POST e o botão para o tipo nativo de submissão.
-  - Aplicar obrigatoriedade, e-mail sintático e o atributo para forçar exatamente 11 dígitos numéricos inteiros no telefone celular.
-
-
-
--->
-
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <title>página</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório de Refatoração Semântica | Suporte Tech</title>
+    
+    <!-- SEO Tradicional -->
+    <meta name="description" content="Portal de suporte técnico para envio de mensagens à equipe de backend. Implementação com foco em semântica, acessibilidade e padrões web.">
+    <meta name="author" content="Gabriel Gama Baptista">
+    
+    <!-- Open Graph / Social SEO -->
+    <meta property="og:title" content="Laboratório de Refatoração Semântica | Suporte Tech">
+    <meta property="og:description" content="Envie sua mensagem para a nossa equipe de suporte backend de forma rápida e segura.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://portal1.iff.edu.br/cursos/ensino-superior/SistesmasdeInformacao2.jpg/@@images/60113ca9-fb0d-4cda-bd41-dbd5c0fb1b40.jpeg">
+    <meta property="og:locale" content="pt_BR">
 </head>
+
 <body>
-    <div id="cabecalho">
-        <div class="titulo">Área de Contato do Cliente</div>
-        <div class="menu">
-            <a href="#">Ajuda</a> | <a href="#">Sair</a>
-        </div>
-    </div>
+    <header>
+        <h1>Área de Contato do Cliente</h1>
+        <nav>
+            <a href="#">Ajuda</a> | 
+            <a href="#">Sair</a>
+        </nav>
+    </header>
 
-    <div id="corpo-da-pagina">
-        <div class="subtitulo">Envie sua mensagem para a nossa equipe de suporte backend</div>
-        
-        <form action="/enviar" method="GET">
-            Nome: <input type="text" name="nome"><br><br>
-            Email: <input type="text" name="email"><br><br>
-            Telefone Celular: <input type="text" name="celular"><br><br>
-            Mensagem: <textarea name="msg"></textarea><br><br>
-            
-            <input type="button" value="Disparar Dados">
-        </form>
-    </div>
+    <main>
+        <section>
+            <h2>Envie sua mensagem para a nossa equipe de suporte backend</h2>
+            <article>
+                <form action="/enviar" method="POST">
+                    <div>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required minlength="3" placeholder="Seu nome completo">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="celular">Telefone Celular:</label>
+                        <input type="text" id="celular" name="celular" pattern="[0-9]{11}" required placeholder="Apenas números (11 dígitos)">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="msg">Mensagem:</label>
+                        <textarea id="msg" name="msg" placeholder="Como podemos ajudar?"></textarea>
+                    </div>
+                    <br>
+                    <button type="submit">Disparar Dados</button>
+                </form>
+            </article>
+        </section>
+    </main>
 
-    <div id="rodape">
-        Suporte Tech 2026
-    </div>
+    <footer>
+        <p>&copy; 2026 Suporte Tech. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
