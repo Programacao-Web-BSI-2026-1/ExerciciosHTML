@@ -46,3 +46,106 @@
         </footer>
     </div>
 </body>
+
+    /* css "estilos" */
+
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e6e6e6;
+    font-family: "Times New Roman", serif;
+}
+
+
+body > div {
+    border: 1px solid #bdbdbd;
+    background: #fff; 
+    min-height: 100vh;
+}
+
+
+header {
+    background: #8a8a8a;
+    color: #fff;
+    padding: 12px;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-areas:
+        "item1"
+        "item2"
+        "item3"
+        "item4";
+    gap: 5px; 
+}
+
+nav ul li:nth-child(1) { grid-area: item1; }
+nav ul li:nth-child(2) { grid-area: item2; }
+nav ul li:nth-child(3) { grid-area: item3; }
+nav ul li:nth-child(4) { grid-area: item4; }
+
+
+nav {
+    width: 20%;
+    float: left;
+    border-right: 1px solid #bdbdbd;
+    padding: 15px 10px;
+    background: #e6e6e6;
+}
+
+nav a {
+    display: block;
+    background: #8a8a8a;
+    color: #000; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+}
+
+nav a:hover {
+    background: #777;
+}
+
+
+section {
+    margin-left: 20%;
+    padding: 25px 35px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+section p {
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+
+footer {
+    clear: both;
+    background: #8a8a8a;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+
+footer p {
+    margin: 0;
+}
+
