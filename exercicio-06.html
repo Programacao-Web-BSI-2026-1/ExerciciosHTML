@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>My first Site</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    
     <style>
-        * {
+         {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,29 +17,52 @@ body {
     background: #f2f2f2;
 }
 
+
 .container {
     width: 98%;
-    min-height: 95vh;
+    min-height: 100vh;
     margin: 5px;
-    border: 1px solid #999;
+
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+
+    grid-template-areas:
+        "header header"
+        "nav section"
+        "footer footer";
+
     background: #fff;
+    border: 1px solid #999;
 }
 
+
 header {
+    grid-area: header;
     background: #808080;
-    color: #fff;
+    color: white;
     padding: 12px;
 }
 
-header h1 {
-    font-size: 24px;
-}
-
 nav {
-    width: 20%;
-    float: left;
+    grid-area: nav;
     padding: 8px;
 }
+
+section {
+    grid-area: section;
+    padding: 20px;
+    border-left: 1px solid #999;
+}
+
+footer {
+    grid-area: footer;
+    background: #808080;
+    color: white;
+    padding: 8px;
+}
+
 
 nav ul {
     list-style: none;
@@ -47,51 +70,36 @@ nav ul {
 
 nav ul li {
     background: #808080;
-    border: 1px solid #666;
     margin-bottom: 4px;
+    border: 1px solid #666;
 }
 
 nav ul li a {
     display: block;
     padding: 12px;
-    color: black;
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
 }
+
 
 nav ul li a:hover {
     background: #fff;
     color: red;
 }
 
-section {
-    width: 80%;
-    float: left;
-    padding: 20px;
-    border-left: 1px solid #999;
-    min-height: 650px;
-}
 
 section h2 {
-    font-size: 24px;
     margin-bottom: 15px;
 }
 
 section p {
-    font-size: 16px;
+    margin-bottom: 15px;
     line-height: 1.5;
     text-align: justify;
-    margin-bottom: 18px;
 }
 
-footer {
-    clear: both;
-    background: #808080;
-    color: #fff;
-    padding: 8px;
-    font-weight: bold;
-}
     </style>
 </head>
 
