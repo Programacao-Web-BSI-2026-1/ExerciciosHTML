@@ -1,0 +1,65 @@
+body {
+    background-color: #f4f4f4;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    width: 250px;
+}
+
+nav {
+    float: left;
+    width: 200px;
+}
+
+section {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+header {
+    background-color: #888;
+    color: white;
+    padding: 15px;
+}
+
+#pagina {
+    background-color: #888;
+    background-size: 3000px;
+}
+
+#sumario {
+    background-color: #888;
+}
+
+#contato {
+    background-color: #888;
+}
+
+#sobre {
+    background-color: #888;
+}
+
+#pagina:hover {
+    background-color: blue;
+    background-size: 3000px;
+}
+
+#sumario:hover {
+    background-color: green;
+}
+
+#contato:hover {
+    background-color: red;
+}
+
+#sobre:hover {
+    background-color: purple;
+}
+
+footer {
+    background-color: #888;
+    color: white;
+    padding: 10px;
+}
