@@ -1,0 +1,120 @@
+/* --- Reset Básico --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Estilo Base do Container --- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f4f6; /* Fundo cinza bem claro para destacar a caixa branca */
+    
+    /* Centralizando com Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+}
+
+/* Ajustes do Cabeçalho do Formulário */
+.container-form header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.container-form header h2 {
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.container-form header p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* --- Layout Interno do Formulário --- */
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grupo-input label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #374151;
+    font-size: 14px;
+}
+
+/* --- Estilização Uniforme de Inputs e Textarea --- */
+.grupo-input input,
+.grupo-input textarea {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #1f2937;
+    
+    /* Correção de Tipografia */
+    font-family: inherit; 
+}
+
+/* Controle de Redimensionamento exclusivo para o textarea */
+.grupo-input textarea {
+    resize: vertical;
+}
+
+/* --- Acessibilidade e Pseudo-classes de Estado (:focus) --- */
+.grupo-input input:focus,
+.grupo-input textarea:focus {
+    border-color: #2563eb; /* Cor Primária (Azul) */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Desafio de Validação: Feedback visual no E-mail ao digitar */
+.grupo-input input[type="email"]:focus:invalid {
+    border-color: #ef4444; /* Vermelho suave para erro */
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.grupo-input input[type="email"]:focus:valid {
+    border-color: #10b981; /* Verde para correto */
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+/* --- Botão de Envio, Transições e Estados --- */
+.btn-enviar {
+    width: 100%; /* Ocupa a largura total para combinar com os campos */
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2563eb;
+    color: #ffffff;
+    border-radius: 6px;
+    
+    /* A Animação base */
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.btn-enviar:hover {
+    background-color: #1d4ed8; /* Tom de azul mais escuro */
+}
+
+.btn-enviar:active {
+    transform: scale(0.98); /* Sensação de "clique" físico */
+}
