@@ -4,6 +4,93 @@
     <meta charset="utf-8">
     <title>My first Site</title>
     <link rel="stylesheet" type="text/css" href=" ">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:"Times New Roman", serif;
+            font-size:12px;
+            padding:8px;
+            background:#e6e6e6;
+        }
+
+        .container{
+            min-height:100vh;
+            border:1px solid #999;
+
+            display:grid;
+            grid-template-columns:330px 1fr;
+            grid-template-rows:auto 1fr auto;
+
+            grid-template-areas:
+                "header header"
+                "nav section"
+                "footer footer";
+        }
+
+        header{
+            grid-area:header;
+            background:#8c8c8c;
+            color:#fff;
+            padding:12px;
+        }
+
+        header h1{
+            font-size:28px;
+        }
+
+        nav{
+            grid-area:nav;
+            padding:10px;
+            border-right:1px solid #555;
+        }
+
+        nav ul{
+            list-style:none;
+        }
+
+        nav li{
+            margin-bottom:4px;
+        }
+
+        nav a{
+            display:block;
+            padding:14px;
+            background:#8c8c8c;
+            color:#000;
+            text-decoration:none;
+            font-weight:bold;
+            border:1px solid #bdbdbd;
+        }
+
+        section{
+            grid-area:section;
+            padding:20px 35px;
+        }
+
+        section h2{
+            font-size:24px;
+            margin-bottom:15px;
+        }
+
+        section p{
+            text-align:justify;
+            margin-bottom:18px;
+            line-height:1.2;
+        }
+
+        footer{
+            grid-area:footer;
+            background:#8c8c8c;
+            color:#fff;
+            padding:6px 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="">
